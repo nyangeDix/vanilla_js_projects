@@ -1,0 +1,74 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: #fff;
+}
+
+.store-container {
+    margin: 2em 2em;
+    background-color: #ffebcc;
+    padding: 2em;
+}
+
+.buttons__container {
+    margin: 2em 0;
+    text-align: center;
+}
+
+.buttons__container button {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+header {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.all-products {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.all-products .card-container {
+    max-width: 14em;
+    background-color: #e2f9ff;
+}
+
+.image-responsive {
+    width: 100%;
+}
+
+.all-products .card-container .card-body-container {
+    padding: 1em;
+}
+
+.all-products .card-container .card-body-container h1 {
+    text-transform: uppercase;
+    margin: .1em 0;
+    font-size: 1.5rem;
+}
+
+.all-products .card-container .card-body-container p {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 1em;
+}
+
+.all-products .card-container .card-body-container a {
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-decoration: none;
+    background-color: chocolate;
+    color: white;
+    padding: .3em 2em;
+}
