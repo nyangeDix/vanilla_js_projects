@@ -17,7 +17,7 @@ const getCard = (producttypecheck) => {
                     <img src=${store.productimage} class="image-responsive" alt=${store.productname}>
                     <div class="card-body-container">
                         <h1>${store.productname}</h1>
-                        <p>${store.productprice}</p>
+                        <p>Ksh: ${store.productprice}</p>
                         <span>
                             <a href="">Buy</a>
                         </span>
