@@ -9,24 +9,49 @@
     <link rel="stylesheet" href="./main.css">
 </head>
 
-<body>
+<body id="body">
+
+    <div class="modal-settings">
+        <div class="settings-container" id="modal-settings-container">
+            <div class="modal-header">
+                <div class="titles">
+                    <h2>Pomodoro settings</h2>
+                    <p>Time is in minutes:</p>
+                </div>
+                <span><a href="">close</a></span>
+            </div>
+            <form action="">
+                <div class="form-group">
+                    <label for="pomodoro">Pomodoro</label>
+                    <input type="number" class="user-input" placeholder="Pomodoro">
+                </div>
+                <div class="form-group">
+                    <label for="pomodoro">Short Break</label>
+                    <input type="number" class="user-input" placeholder="Short Break">
+                </div>
+                <div class="form-group">
+                    <label for="pomodoro">Long Break</label>
+                    <input type="number" class="user-input" placeholder="Long Break">
+                </div>
+                <button class="btn">OK</button>
+            </form>
+        </div>
+    </div>
 
     <div class="pomo_ui">
         <header>
             <h1>Pomodoro</h1>
-            <button>Settings</button>
+            <button id="launch-modal">Settings</button>
         </header>
 
         <main>
             <div class="btn-container">
-                <a href="" class="btn_pomodoro active">Pomodoro</a>
-                <a href="" class="btn_pomodoro">Short Break</a>
-                <a href="" class="btn_pomodoro">Long Break</a>
+                <a href="#" id="pomodoro" class="btn_pomodoro">Pomodoro</a>
+                <a href="#" id="short-break" class="btn_pomodoro">Short Break</a>
+                <a href="#" id="long-break" class="btn_pomodoro">Long Break</a>
             </div>
-            <div class="main-timers">
-                <div class="pomodoro">
-                    <h1>60:00</h1>
-                </div>
+            <div class="main-timers" id="timer-handler">
+
             </div>
         </main>
 
@@ -35,6 +60,8 @@
         </footer>
 
     </div>
+
+    <script src="./main.js" type="module" defer></script>
 
 </body>
 
