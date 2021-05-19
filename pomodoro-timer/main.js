@@ -8,6 +8,8 @@ const longBreak = document.getElementById('long-break');
 const timerHandler = document.getElementById('timer-handler');
 const launchModal = document.getElementById('launch-modal');
 const modal = document.getElementById('modal-settings-container');
+const pomodoroTimer = document.getElementById('pomodoro-timer');
+const date = new Date();
 
 window.onload = () => {
     timerHandler.innerHTML = renderPomodoro();
@@ -39,13 +41,11 @@ launchModal.addEventListener('click', (e) => {
     modal.classList.add('modal-view');
 });
 
-
-const pomodoroTimer = document.getElementById('pomodoro-timer');
-const date = new Date();
-
-console.log(pomodoroTimer);
-
-// setInterval(() => {
-//     pomodoroTimer.innerHTML = date.getMinutes;
-//     console.log('Timer running');
-// }, 1000);
+setInterval(() => {
+    if (pomodoroTimer) {
+        pomodoroTimer.innerHTML = date.getMinutes;
+        console.log('Timer running');
+    } else {
+        console.log('Element not found');
+    }
+}, 1000);
