@@ -12,29 +12,40 @@ const modal = document.getElementById('modal-settings-container');
 window.onload = () => {
     timerHandler.innerHTML = renderPomodoro();
     pomodoro.classList.add('active');
-}
+};
 
 pomodoro.addEventListener('click', (e) => {
     e.preventDefault();
     timerHandler.innerHTML = renderPomodoro();
     pomodoro.classList.add('active');
     pomoDoroClasses(shortBreak, longBreak, body);
-})
+});
 
 shortBreak.addEventListener('click', (e) => {
     e.preventDefault();
     timerHandler.innerHTML = renderShortBreak();
     shortBreakClasses(shortBreak, pomodoro, longBreak);
-})
+});
 
 longBreak.addEventListener('click', (e) => {
     e.preventDefault();
     timerHandler.innerHTML = renderLongBreak();
     longBreakClasses(shortBreak, pomodoro, longBreak, body);
-})
+});
 
 launchModal.addEventListener('click', (e) => {
     e.preventDefault();
     console.log('...modal');
     modal.classList.add('modal-view');
-})
+});
+
+
+const pomodoroTimer = document.getElementById('pomodoro-timer');
+const date = new Date();
+
+console.log(pomodoroTimer);
+
+// setInterval(() => {
+//     pomodoroTimer.innerHTML = date.getMinutes;
+//     console.log('Timer running');
+// }, 1000);
