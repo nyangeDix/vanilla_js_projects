@@ -1,6 +1,6 @@
 const renderPomodoro = () => {
     return `<div class="pomodoro">
-                    <h1 id="pomodoro-timer">90</h1>
+                    <h1 id="pomodoro-timer"></h1>
                     <a href="" class="btn-start">Start</a>
                 </div>`;
 }

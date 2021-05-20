@@ -14,6 +14,9 @@ const date = new Date();
 window.onload = () => {
     timerHandler.innerHTML = renderPomodoro();
     pomodoro.classList.add('active');
+    console.log(timerHandler);
+    console.log(pomoTimer);
+    pomoTimer.textContent = 'Helo';
 };
 
 pomodoro.addEventListener('click', (e) => {
@@ -21,6 +24,8 @@ pomodoro.addEventListener('click', (e) => {
     timerHandler.innerHTML = renderPomodoro();
     pomodoro.classList.add('active');
     pomoDoroClasses(shortBreak, longBreak, body);
+    pomoTimer.textContent = 'Helo';
+    console.log(timerHandler);
 });
 
 shortBreak.addEventListener('click', (e) => {
@@ -41,8 +46,9 @@ launchModal.addEventListener('click', (e) => {
     modal.classList.add('modal-view');
 });
 
-console.log(timerHandler);
-console.log(pomoTimer[0].textContent);
+
+// console.log(p);
+
 // setInterval(() => {
 //     if (pomodoroTimer) {
 //         pomodoroTimer.innerHTML = date.getMinutes;
