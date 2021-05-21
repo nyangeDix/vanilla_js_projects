@@ -8,24 +8,29 @@ const longBreak = document.getElementById('long-break');
 const timerHandler = document.getElementById('timer-handler');
 const launchModal = document.getElementById('launch-modal');
 const modal = document.getElementById('modal-settings-container');
-const pomoTimer = document.getElementById('pomodoro-timer');
 const date = new Date();
 
 window.onload = () => {
     timerHandler.innerHTML = renderPomodoro();
     pomodoro.classList.add('active');
     console.log(timerHandler);
-    console.log(pomoTimer);
-    pomoTimer.textContent = 'Helo';
+
+    // const timerPomo = document.getElementById('pomodoro-timer');
+    // timerPomo.innerHTML = "90:00";
+
+    runTimer('pomodoro-timer', '01:00');
+
 };
+
+
 
 pomodoro.addEventListener('click', (e) => {
     e.preventDefault();
     timerHandler.innerHTML = renderPomodoro();
     pomodoro.classList.add('active');
     pomoDoroClasses(shortBreak, longBreak, body);
-    pomoTimer.textContent = 'Helo';
-    console.log(timerHandler);
+    const timerPomo = document.getElementById('pomodoro-timer');
+    timerPomo.innerHTML = "90:00";
 });
 
 shortBreak.addEventListener('click', (e) => {
@@ -46,14 +51,21 @@ launchModal.addEventListener('click', (e) => {
     modal.classList.add('modal-view');
 });
 
+const timer = (endtimer) => {
+    const countdown = Date.parse(endtimer) - Date.parse(new Date());
+    const seconds = Math.floor((countdown / 1000) % 60);
+    const minutes = Math.floor((countdown / 1000 / 60) % 60);
+    return { countdown, seconds, minutes };
+}
 
-// console.log(p);
-
-// setInterval(() => {
-//     if (pomodoroTimer) {
-//         pomodoroTimer.innerHTML = date.getMinutes;
-//         console.log('Timer running');
-//     } else {
-//         console.log('Element not found');
-//     }
-// }, 1000);
+const runTimer = (id, endtimer) => {
+    const timerPomo = document.getElementById(id);
+    const intervals = setInterval(() => {
+        const r_timer = timer(endtimer);
+        timerPomo.innerHTML = `${r_timer.minutes} : ${r_timer.seconds}`;
+        console.log(r_timer.minutes + r_timer.seconds);
+        if (r_timer.total <= 0) {
+            alert('Time to take a break');
+        }
+    }, 1000)
+}
