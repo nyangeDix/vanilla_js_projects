@@ -18,22 +18,24 @@
                     <h2>Pomodoro settings</h2>
                     <p>Time is in minutes:</p>
                 </div>
-                <span><a href="">close</a></span>
+                <!-- <span><a href="">close</a></span> -->
             </div>
             <form action="">
                 <div class="form-group">
                     <label for="pomodoro">Pomodoro</label>
-                    <input type="number" class="user-input" placeholder="Pomodoro">
+                    <input type="number" class="user-input" steps="3" id="setPomoTimer" placeholder="Pomodoro" required>
                 </div>
                 <div class="form-group">
                     <label for="pomodoro">Short Break</label>
-                    <input type="number" class="user-input" placeholder="Short Break">
+                    <input type="number" class="user-input" steps="3" id="setShortBreak" placeholder="Short Break"
+                        required>
                 </div>
                 <div class="form-group">
                     <label for="pomodoro">Long Break</label>
-                    <input type="number" class="user-input" placeholder="Long Break">
+                    <input type="number" class="user-input" steps="3" id="setLongBreak" placeholder="Long Break"
+                        required>
                 </div>
-                <button class="btn">OK</button>
+                <button class="btn" id="setButton">OK</button>
             </form>
         </div>
     </div>
@@ -53,11 +55,18 @@
             <div class="main-timers" id="timer-handler">
 
             </div>
+
         </main>
 
         <footer>
             <p>Time to work!</p>
+
+            <div class="ring" id="ring">
+
+            </div>
+
         </footer>
+
 
     </div>
 
